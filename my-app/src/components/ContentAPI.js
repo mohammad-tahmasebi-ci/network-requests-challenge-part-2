@@ -12,6 +12,7 @@ class ContentAPI extends Component {
        posts: [],
        isLoaded: false,
        filteredPosts: [],
+       isActive: true
     }
   }
 
@@ -37,13 +38,15 @@ class ContentAPI extends Component {
     this.setState({
         filteredPosts: filteredPosts
     })
-
+    this.setState({isActive: false});
   }
 
   render() {
   return (
     <div>
+      {this.state.isActive &&
         <input type='text' id="search" name='search' placeholder='Artwork type: photo' onChange={this.handelChange} />
+      }
         {
         this.state.filteredPosts.map(post => 
         <form key={post.id}>
