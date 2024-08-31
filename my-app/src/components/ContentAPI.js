@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-import pixabay from '../pixabay.json'
 import API_KEY from '../secrets'
 import PostItemAPI from "./PostItemAPI";
 
